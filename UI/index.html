@@ -8,9 +8,18 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <!-- set layout for index.html -->
+    <!-- section layout for index.html -->
     <section class="layout">
-
+      <div class="branding"></div>
+      <div class="form">
+        <div class="login">
+          <input type="name" class="form-input" placeholder="User name" required="required">
+		  		              <input type="password" class="form-input" placeholder="Password" required="required">
+												<p>Admin<input type="radio" class="radio" name="wali" value="admin" id="admin"></p>
+												<p>User<input type="radio" name="wali" value="user" id="user"></p>
+												<button type="submit" class="button" onclick="SelectUser()" >Login</button>
+        </div>
+      </div>
     </section>
   </body>
 </html>
