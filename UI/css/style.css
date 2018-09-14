@@ -192,8 +192,6 @@ nav a{
   font-weight: bold;
 }
 
-
-
 input[type=checkbox]:not(old){
   display      : inline-block;
   margin: auto;
@@ -201,4 +199,24 @@ input[type=checkbox]:not(old){
   border: 0px;
   width: 30%;
   height: 1.5em
+}
+
+#foodcart{
+  height: 25%;
+  float: right;
+  width: 38%;
+  margin-top: 80px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 3px solid #9898ff;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+#foodcart h1{
+  font: 25px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px;
+  text-align: center;
 }
