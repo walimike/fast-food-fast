@@ -12,3 +12,87 @@ body{
   height: 100vh;
   border:  1.5px solid #9898ff;
 }
+
+.branding{
+  float: left;
+  margin-left: 20px;
+}
+
+.branding .highlight{
+  color: #e8491d;
+  font-weight: bold;
+}
+
+.branding h1{
+  font: 50px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 20px;
+}
+
+header .branding{
+  float: right;
+}
+
+/* styling for index.html */
+
+.form{
+  height: 60%;
+  float: right;
+  width: 30%;
+  margin-top: 80px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+	border: 3px solid #9898ff;
+	border-radius: 5px;
+}
+
+.signup{
+  margin-top: 100px;
+}
+
+.signup h1{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  margin: 20px;
+  color: white
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.log_in{
+  margin-top: 80px;
+}
+
+input[type=name], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #9898ff;
+    font: 20px/1.5 Arial, Helvetica, sans-serif;
+}
+
+input[type=radio]{
+  border: 0px;
+  width: 10%;
+  height: 1.3em;
+}
+
+form p{
+  font:  20px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.button, .button4{
+  color: white;
+  background-color: blue;
+  float: right;
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 3px;
+}
