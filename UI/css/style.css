@@ -127,11 +127,7 @@ nav a{
   font: 30px/1.5 Arial, Helvetica, sans-serif;
 }
 
-.caps, .caps2{
-  font: 40px/1.5 Arial, Helvetica, sans-serif;
-}
-
-.caps2{
+.caps{
   color: #e8491d;
   font-weight: bold;
 }
@@ -214,9 +210,41 @@ input[type=checkbox]:not(old){
   overflow-y: scroll;
 }
 
-#foodcart h1{
+#foodcart h1, #viewhistory h1{
   font: 25px/1.5 Arial, Helvetica, sans-serif;
   color: white;
   margin: 10px;
   text-align: center;
+}
+
+#viewhistory{
+  height: 40%;
+  float: right;
+  width: 45%;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid #9898ff;
+  border-radius: 5px;
+}
+
+#viewhistory table{
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+#viewhistory th, #viewhistory td  {
+    background-color: #4CAF50;
+    color: white;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#selecteditems table{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
