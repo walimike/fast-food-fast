@@ -135,3 +135,70 @@ nav a{
   color: #e8491d;
   font-weight: bold;
 }
+
+#menu{
+  height: 50%;
+  float: left;
+  width: 45%;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 3px solid #9898ff;
+  border-radius: 5px;
+}
+
+#menu h1{
+  font: 35px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+#food{
+  width:90%;
+  height: 70%;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+#food table{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+#food thead{
+  background-color: #4CAF50;
+}
+
+#food th, td  {
+    text-align: center;
+    border-radius: 10px 2px;
+    border-bottom: 2px solid #ddd;
+}
+
+#food th {
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 35px;
+  color: white;
+}
+
+#food td {
+  height: 30px;
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+
+
+input[type=checkbox]:not(old){
+  display      : inline-block;
+  margin: auto;
+  padding: inherit;
+  border: 0px;
+  width: 30%;
+  height: 1.5em
+}
