@@ -37,5 +37,16 @@ function addToCart() {
 
 	function clearDiv() {
     document.getElementById("selecteditems").innerHTML = "";
-		location.reload();
 }
+
+//admin declines Order
+
+function refreshPage(){
+	location.reload();
+}
+
+// Alert message for marking order as complete
+
+	function markOrder() {
+	    alert("The order has been marked as complete!");
+	}
