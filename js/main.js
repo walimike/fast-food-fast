@@ -50,3 +50,9 @@ function refreshPage(){
 	function markOrder() {
 	    alert("The order has been marked as complete!");
 	}
+
+	// Alert message for adding items to food list
+
+		function addItem() {
+		    alert("Item has been added to food list.");
+		}
