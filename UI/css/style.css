@@ -301,7 +301,7 @@ input[type=checkbox]:not(old){
 }
 
 #admincart2{
-    height: 50%;
+    height: 55%;
 }
 
 #order{
@@ -319,4 +319,44 @@ input[type=checkbox]:not(old){
   font: 15px/1.5 Arial, Helvetica, sans-serif;
   margin-right: 5px;
   font-weight: bold;
+}
+
+.button3, .button4{
+  color: white;
+  float: right;
+  margin-left: 20px;
+  height: 25px;
+  width: 60px;
+}
+
+.button3{
+  background-color: green;
+}
+
+.button4{
+  background-color: red;
+}
+
+.adminform{
+  height: 30px;
+}
+
+.adminform .foodform, .adminform .priceform{
+  margin: 8px 8px;
+  text-align: center;
+  height: 20px;
+  width: 45%;
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.adminform .foodform{
+  float:left;
+}
+
+.adminform .priceform{
+  float:right;
+}
+
+.button5 .button{
+  float:right;
 }
