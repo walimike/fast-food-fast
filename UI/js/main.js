@@ -26,3 +26,16 @@ function addToCart() {
       selection.innerHTML = selection.innerHTML + "<p>" + item;
     }
   }
+
+// Alert message for recieved Order
+
+	function makeOrder() {
+	    alert("Order has been recieved!");
+	}
+
+// clears div for new activity
+
+	function clearDiv() {
+    document.getElementById("selecteditems").innerHTML = "";
+		location.reload();
+}
