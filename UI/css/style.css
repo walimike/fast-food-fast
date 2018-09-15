@@ -265,7 +265,7 @@ input[type=checkbox]:not(old){
 /* styling for admin home*/
 
 
-#adminmenu h1, #admincart h1{
+#adminmenu h1, #admincart h1, #admincart2 h1{
   text-align: center;
   font: 30px/1.5 Arial, Helvetica, sans-serif;
   margin: 2px;
@@ -284,8 +284,7 @@ input[type=checkbox]:not(old){
   border-radius: 5px;
 }
 
-#admincart{
-  height: 20%;
+#admincart, #admincart2{
   float: right;
   width: 50%;
   margin-top: 10px;
@@ -294,9 +293,30 @@ input[type=checkbox]:not(old){
   background-color: transparent;
   border: 1px solid #9898ff;
   border-radius: 5px;
+}
+
+#admincart{
+  height: 20%;
   overflow-y: scroll;
+}
+
+#admincart2{
+    height: 50%;
 }
 
 #order{
   margin-bottom: 0px;
+}
+
+#foodlist{
+  overflow: hidden;
+  height: 70%;
+  width: 90%;
+  margin: auto;
+}
+
+#foodlist p{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  margin-right: 5px;
+  font-weight: bold;
 }
