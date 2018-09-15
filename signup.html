@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Michael Robert Wali">
+    <title>Admin</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <section class="layout">
+      <div class="branding">
+        <h1>Fast Food <span class="highlight">Fast</span><h1>
+      </div>
+      <div class="signupform">
+        <div class="signup">
+          <form>
+            <input type="text" name="username" class="form-input" placeholder="User Name" required="required">
+            <input type="email" name="emailadress" class="form-input" placeholder="Email" required="required">
+            <input type="password" name="pwd" class="form-input" placeholder="Password" required="required">
+            <input type="password" name="pwd" class="form-input" placeholder="Verify Password" required="required">
+            <p>Sign up as Admin<input type="radio" class="radio" name="wali" value="admin" id="radioadmin"></p>
+            <p>Sign up as User<input type="radio" class="radio" name="wali" value="user" id="radiouser"></p>
+          </form>
+          <button type="submit" class="button6" onclick="SelectUser()" >Sign Up</button>
+        </div>
+        <div class="log_in">
+          <h1>Go to <a href="index.html">Log in</a></h1>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
