@@ -360,3 +360,44 @@ input[type=checkbox]:not(old){
 .button5 .button{
   float:right;
 }
+
+/* signup.html styling */
+
+.signupform{
+  height: 60%;
+  width: 50%;
+  margin: 150px 220px;
+  padding: 20px;
+  background-color: transparent;
+	border: 2px solid #9898ff;
+  border-radius: 5px;
+
+}
+
+.signup{
+  margin-top: 20px;
+}
+
+.signup .form-input{
+  width: 50%;
+  height: 37px;
+  margin: 10px 70px;
+  border: 1px solid #9898ff;
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.signup p{
+  font:  20px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.signupform .login{
+  margin-top: 100px;
+}
+
+.signup .login h1{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  margin: 20px;
+  color: white
+}
