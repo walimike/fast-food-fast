@@ -26,3 +26,27 @@ function addToCart() {
       selection.innerHTML = selection.innerHTML + "<p>" + item;
     }
   }
+
+// Alert message for recieved Order
+
+	function makeOrder() {
+	    alert("Order has been recieved!");
+	}
+
+// clears div for new activity
+
+	function clearDiv() {
+    document.getElementById("selecteditems").innerHTML = "";
+}
+
+//admin declines Order
+
+function refreshPage(){
+	location.reload();
+}
+
+// Alert message for marking order as complete
+
+	function markOrder() {
+	    alert("The order has been marked as complete!");
+	}
