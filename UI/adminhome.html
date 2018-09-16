@@ -41,9 +41,11 @@
           </div>
           <div id="order">
             <button type="submit" class="button1" onClick="addToCart()" >Accept Order</button>
-            <button type="submit" class="button2" onclick="declineOrder()">Decline Order</button>
+            <button type="submit" class="button2" onclick="refreshPage()">Decline Order</button>
           </div>
-          <div id="adninpic"></div>
+          <div id="adminpic">
+            <img src="images/fastfood3.png">
+          </div>
       </div>
       <div id="admincart">
         <h1>Mark Orders as Completed</h1>
@@ -73,7 +75,7 @@
           <input type="number" class="priceform" placeholder="Food Price" required="required">
         </div>
         <div class="button5">
-          <button type="submit" class="button" onClick="" >Add</button>
+          <button type="submit" class="button" onClick="addItem(); refreshPage();" >Add</button>
         </div>
       </div>
     </section>
