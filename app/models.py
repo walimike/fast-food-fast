@@ -1,5 +1,4 @@
 
-
 class OrderList(object):
     """A class for managing orders made"""
 
@@ -13,8 +12,14 @@ class OrderList(object):
         self.order = order
         self.price = price
         self.status = "No"
+        if self.is_repeated(self.order):
+            pass
         new_order = self.asdict(self.id,self.order,self.price,self.status)
         OrderList.order_list.append(new_order)
+
+    def is_repeated(self,order):
+        pass
+
 
     def asdict(self, id, order, price,status):
         return {'orderid':id,'order':order,'price':price, 'completed_status':status}
@@ -35,4 +40,4 @@ class OrderList(object):
     def retrieve_order(self,id):
         order = [order for order in OrderList.order_list if order['orderid'] == id]
         if len(order)==1:
-            return order[0]["price"]
+            return order[0]
