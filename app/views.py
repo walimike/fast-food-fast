@@ -16,7 +16,7 @@ def make_order():
     """checks whether order is in the food catalogue"""
     if not check(recieved_order['order']):
         abort(503)
-    OrderList().add_order(recieved_order['order'],check(recieved_order['order'])
+    OrderList().add_order(recieved_order['order'],check(recieved_order['order']))
     return jsonify({'orderlist': OrderList.order_list}), 201
 
 #defining error handlers for 400 and 503
