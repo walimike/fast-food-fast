@@ -19,7 +19,7 @@ class TestOrderList(unittest.TestCase):
         self.assertEquals(len(OrderList.order_list), 1)
 
     def test_can_retrieve_order(self):
-
+        pass
 
     def test_can_generate unique_id(self):
         self.setUp1
