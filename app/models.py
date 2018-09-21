@@ -12,13 +12,16 @@ class OrderList(object):
         self.order = order
         self.price = price
         self.status = "No"
-        if self.is_repeated(self.order):
-            pass
         new_order = self.asdict(self.id,self.order,self.price,self.status)
-        OrderList.order_list.append(new_order)
 
-    def is_repeated(self,order):
-        pass
+        """This loop prevents replication of orders"""
+        if not len(OrderList.order_list) == 0 and OrderList.order_list[-1]["order"] == self.order:
+            return
+        OrderList.order_list.append(new_order)
+        #OrderList.order_list.append(new_order)
+        '''Checks whether order is being repeated'''
+
+
 
 
     def asdict(self, id, order, price,status):
