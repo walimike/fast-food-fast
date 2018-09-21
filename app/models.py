@@ -43,15 +43,3 @@ class OrderList(object):
         order = [order for order in OrderList.order_list if order['orderid'] == id]
         if len(order)==1:
             return order[0]
-
-
-OrderList().add_order('rice',5000)
-OrderList().add_order('chicken',6000)
-OrderList().add_order('chips',5700)
-OrderList().add_order('matooke',15000)
-
-OrderList().update_order(2,'yes')
-OrderList().update_order(4,'yes')
-OrderList().update_order(2,'no')
-#print(OrderList().id_limit())
-print(OrderList.order_list)
