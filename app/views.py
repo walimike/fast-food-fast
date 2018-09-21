@@ -12,3 +12,7 @@ def get_specific_order(order_id):
     if not specific_order:
         abort(404)
     return jsonify({'food_item': specific_order})
+
+@app.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify({'error': 'Not found'}), 404)
