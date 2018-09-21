@@ -7,6 +7,21 @@ class OrderList(object):
     def __init__(self):
         pass
 
+    def add_order(self, order,price):
+        self.id = self.id_manager(OrderList.order_list)
+        self.order = order
+        self.price = price
+        self.status = "No"
+        new_order = self.asdict(self.id,self.order,self.price,self.status)
+
+        """This loop prevents replication of orders"""
+        if not len(OrderList.order_list) == 0 and OrderList.order_list[-1]["order"] == self.order:
+            return
+        OrderList.order_list.append(new_order)
+
+    def asdict(self, id, order, price,status):
+        return {'orderid':id,'order':order,'price':price, 'completed_status':status}
+      
     def add_order(self, order):
         self.id = self.id_manager(OrderList.order_list)
         self.order = order
@@ -31,4 +46,6 @@ class OrderList(object):
         pass
 
     def retrieve_order(self,id):
-        pass
+        order = [order for order in OrderList.order_list if order['orderid'] == id]
+        if len(order)==1:
+            return order[0]
