@@ -1,4 +1,3 @@
-from data import PriceList
 
 class OrderList(object):
     """A class for managing orders made"""
@@ -33,7 +32,3 @@ class OrderList(object):
 
     def retrieve_order(self,id):
         pass
-
-
-
-#print(OrderList.order_list)
