@@ -29,16 +29,29 @@ class OrderList(object):
             self.id = (list[-1]['orderid']) + 1
         return self.id
 
-    def update_order(order,id):
+    def update_order(self,id,status):
         order = [order for order in OrderList.order_list if order['orderid']== id]
-        if order[0]['completed_status'] == "Yes":
-            pass
-        order[0]['completed_status'] = "Yes"
+        order[0]['completed_status'] = status.title()
 
     def valid_order(self,order):
         pass
+
+    def id_limit(self):
+        return OrderList.order_list[-1]['orderid']
 
     def retrieve_order(self,id):
         order = [order for order in OrderList.order_list if order['orderid'] == id]
         if len(order)==1:
             return order[0]
+
+
+OrderList().add_order('rice',5000)
+OrderList().add_order('chicken',6000)
+OrderList().add_order('chips',5700)
+OrderList().add_order('matooke',15000)
+
+OrderList().update_order(2,'yes')
+OrderList().update_order(4,'yes')
+OrderList().update_order(2,'no')
+#print(OrderList().id_limit())
+print(OrderList.order_list)
