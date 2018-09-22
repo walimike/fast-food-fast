@@ -1,8 +1,8 @@
 import unittest
-
 from flask import json
+from app import create_app
+from app.config import TestingConfig
 
-#Will import folder with api logic here
 
 class EndpointsTestCase(unittest.TestCase):
     """
@@ -28,6 +28,6 @@ class EndpointsTestCase(unittest.TestCase):
         response = self.client.get('/fastfoodfast/v1/orders')
         self.assertEqual(response.status_code, 200)
 
-    def test_can_update_order(self)
+    def test_can_update_order(self):
         response = self.client.get('/fastfoodfast/v1/orders/<int:order_id>')
-        self.assertEqual(res.status_code, 201)        
+        self.assertEqual(res.status_code, 201)
