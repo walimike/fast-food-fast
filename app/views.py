@@ -8,14 +8,14 @@ app = create_app(config_name='development')
 # endpoint for updating the completion status for an order
 @app.route('/fastfoodfast/v1/orders/<int:order_id>', methods=['PUT'])
 def update_order(order_id):
-    if not order_id.isdigit():
+    if not type(order_id)==int:
         abort(400)
     if order_id<1 or order_id>(OrderList().id_limit()):
         abort(404)
     if not request.json and not (request.json()['completed_status']).isalpha():
         abort(400)
-    new_status =  request.json['completed_status']).lower()
-    if (new_status != ("yes" or "no")
+    new_status =  request.get_json()['completed_status'])
+    if new_status.lower() != ("yes" or "no"):
         abort(406)
     OrderList().update_order(order_id,new_status)
     return jsonify({'orderlist':OrderList.order_list})
