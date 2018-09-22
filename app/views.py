@@ -47,7 +47,7 @@ def update_order(order_id):
         abort(404)
     if not request.json and not (request.json()['completed_status']).isalpha():
         abort(400)
-    new_status =  request.get_json()['completed_status'])
+    new_status =  request.get_json()['completed_status']
     if new_status.lower() != ("yes" or "no"):
         abort(406)
     OrderList().update_order(order_id,new_status)
