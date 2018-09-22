@@ -1,4 +1,7 @@
-food_catalogue = [{"food":"matooke","price":5000}]
+food_catalogue = [{"food":"matooke","price":5000},
+                  {"food":"posho","price":2500},
+                  {"food":"rice","price":3000}
+]
 
 #returns price of food if food exists in catalogue and none in case food not found
 def check_catalogue(food):
