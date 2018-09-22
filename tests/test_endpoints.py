@@ -29,4 +29,5 @@ class EndpointsTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_can_update_order(self)
-        pass
+        response = self.client.get('/fastfoodfast/v1/orders/<int:order_id>')
+        self.assertEqual(res.status_code, 201)        

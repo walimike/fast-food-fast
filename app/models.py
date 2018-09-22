@@ -21,13 +21,6 @@ class OrderList(object):
 
     def asdict(self, id, order, price,status):
         return {'orderid':id,'order':order,'price':price, 'completed_status':status}
-      
-    def add_order(self, order):
-        self.id = self.id_manager(OrderList.order_list)
-        self.order = order
-        self.price = price
-        new_order = self.asdict(self.id,self.order,self.price)
-        OrderList.order_list.append(new_order)
 
     def asdict(self, id, order, price):
         return {'orderid':id,'order':order,'price':price}
@@ -39,11 +32,12 @@ class OrderList(object):
             self.id = (list[-1]['orderid']) + 1
         return self.id
 
-    def update_order(order,id):
-        pass
-
-    def valid_order(self,order):
-        pass
+    def update_order(self,id,status):
+        order = [order for order in OrderList.order_list if order['orderid']== id]
+        order[0]['completed_status'] = status.title()
+        
+    def id_limit(self):
+        return OrderList.order_list[-1]['orderid']
 
     def retrieve_order(self,id):
         order = [order for order in OrderList.order_list if order['orderid'] == id]
