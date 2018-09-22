@@ -10,7 +10,7 @@ app = create_app(config_name='development')
 def update_order(order_id):
     if not order_id.isdigit():
         abort(400)
-    if order_id<1 or order_id>OrderList()id_limit():
+    if order_id<1 or order_id>(OrderList().id_limit()):
         abort(404)
     if not request.json and not (request.json['completed_status']).isalpha():
         abort(400)
