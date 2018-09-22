@@ -5,10 +5,10 @@ from data import check_catalogue
 
 app = create_app(config_name='development')
 
-#tests whether api is working.
+#welcome message for user.
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return "<h1> Welcome to Fast Food Fast"
 
 #fetches all orders, returns empty list, if none
 @app.route('/fastfoodfast/v1/orders', methods=['GET'])
@@ -23,7 +23,21 @@ def get_specific_order(order_id):
         abort(404)
     return jsonify({'food_item': specific_order})
 
-  
+# endpoint for making an order
+@app.route('/fastfoodfast/v1/orders', methods=['POST'])
+def make_order():
+    """checks whether request is in right format"""
+    if not request.json or not 'order' in request.json:
+        abort(400)
+    recieved_order = request.get_json()['order']
+
+    """checks whether order is in the food catalogue"""
+    if not check_catalogue(recieved_order):
+        abort(503)
+    OrderList().add_order(recieved_order,check_catalogue(recieved_order))
+    return jsonify({'orderlist': OrderList.order_list}), 201
+
+
 # endpoint for updating the completion status for an order
 @app.route('/fastfoodfast/v1/orders/<int:order_id>', methods=['PUT'])
 def update_order(order_id):
