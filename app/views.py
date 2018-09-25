@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, abort, request, make_response
-from models import OrderList
-from app import create_app
-from data import check_catalogue
+from .models import OrderList
+from . import create_app
+from .data import check_catalogue
 
 app = create_app(config_name='development')
 
