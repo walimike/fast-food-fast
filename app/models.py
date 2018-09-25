@@ -22,9 +22,6 @@ class OrderList(object):
     def asdict(self, id, order, price,status):
         return {'orderid':id,'order':order,'price':price, 'completed_status':status}
 
-    def asdict(self, id, order, price):
-        return {'orderid':id,'order':order,'price':price}
-
     def id_manager(self,list):
         if len(list)==0:
             self.id = 1
