@@ -58,7 +58,7 @@ def update_order(order_id):
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
-  @app.errorhandler(400)
+@app.errorhandler(400)
 def not_found(error):
     return make_response(jsonify( { 'error': 'Bad request' } ), 400)
 
