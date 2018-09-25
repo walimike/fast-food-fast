@@ -1,33 +1,29 @@
 import unittest
 from flask import json
-from app import create_app
-from app.config import TestingConfig
+from app.views import app
+from app.models import OrderList
+import unittest
 
 
 class EndpointsTestCase(unittest.TestCase):
-    """
-    Tests all endpoints for our api
-    """
-    def setUp(self):
-        pass
 
+    def setUp(self):
+        self.client = app.test_client()
+        self.test_order = {"order":"matooke"}
+
+    # test for endpoints. Run using $pytest
     def test_can_get_all_orders(self):
         response = self.client.get('/fastfoodfast/v1/orders')
         self.assertEqual(response.status_code, 200)
 
-    def test_whether_is_empty(self):
-        response = self.client.get('/fastfoodfast/v1/orders')
-        self.assertEqual(len(response), 0)
+    def test_can_make_an_order(self):
+        res = self.client.post('/fastfoodfast/v1/orders', json = self.test_order)
+        self.assertEqual(res.status_code, 201)  
 
-    def test_can_add_order(self):
-        test_order = {"order":"chicken"}
-        res = self.client.post('/fastfoodfast/v1/orders', json = test_order)
-        self.assertEqual(res.status_code, 201)
 
     def test_can_get_specific_order(self):
-        response = self.client.get('/fastfoodfast/v1/orders')
+        response = self.client.get('/fastfoodfast/v1/orders/1')
         self.assertEqual(response.status_code, 200)
 
     def test_can_update_order(self):
-        response = self.client.get('/fastfoodfast/v1/orders/<int:order_id>')
-        self.assertEqual(res.status_code, 201)
+        pass    
