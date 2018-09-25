@@ -65,3 +65,8 @@ def not_found(error):
 @app.errorhandler(406)
 def not_found(error):
     return make_response(jsonify( { 'error': 'This only takes a "Yes/No" response' } ), 406)
+
+
+@app.errorhandler(503)
+def not_found(error):
+    return make_response(jsonify( { 'error': 'You seem to be repeating the order' } ), 503)
