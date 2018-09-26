@@ -12,7 +12,7 @@
 2. git
 3. pip
 4. virtualenv
-<br/>
+
 ## Getting started
 1. Clone the project<br />
 `git clone` https://github.com/walimike/fast-food-fast.git<br />
