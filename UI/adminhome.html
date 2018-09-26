@@ -12,7 +12,8 @@
     <section class="adminlayout">
       <nav>
         <h1>Welcome Admin to <span class="caps">Fast Food Fast</span></h1>
-        <a href="index.html">Logout</a>
+        <a href="index.html"><button type="submit" class="button" onClick="" >Log out</button></a>
+        <a href="fooditems.html">Food items</a>
       </nav>
       <div id="adminmenu">
           <h1>List of Orders</h1>
@@ -54,26 +55,6 @@
             <tr><th></th></tr>
           </table>
           <button type="submit" class="button" onClick="clearDiv(); markOrder(); refreshPage();" >Complete</button>
-        </div>
-      </div>
-      <div id="admincart2">
-        <h1>List of Food Items</h1>
-        <div id="foodlist">
-            <p>Chicken Masala.......................7500<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Matooke/beef.........................9500<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Goats meat...........................7000<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Fried fish..........................15000<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Vegetatble Rice......................3500<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Pair of kebabs.......................1500<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Chps plain...........................3000<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-            <p>Chapati...............................500<button type="submit" class="button3" onClick="" >Edit</button><button type="submit" class="button4" onClick="" >Delete</button></p>
-        </div>
-        <div class="adminform">
-          <input type="name" class="foodform" placeholder="Food name" required="required">
-          <input type="number" class="priceform" placeholder="Food Price" required="required">
-        </div>
-        <div class="button5">
-          <button type="submit" class="button" onClick="addItem(); refreshPage();" >Add</button>
         </div>
       </div>
     </section>
