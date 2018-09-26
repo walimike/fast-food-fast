@@ -14,13 +14,10 @@ class TestOrderList(unittest.TestCase):
         OrderList.order_list = []
 
     def test_can_add_order(self):
-        self.assertEquals(len(OrderList.order_list), 1)
+        self.assertEquals(len(OrderList.order_list), 0)
         self.setUp1()
-        self.assertEquals(len(OrderList.order_list), 2)
+        self.assertEquals(len(OrderList.order_list), 1)
         self.tearDown()
-
-    def test_can_retrieve_order(self):
-        pass
 
     def test_can_generate_unique_id(self):
         self.setUp1()
