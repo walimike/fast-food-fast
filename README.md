@@ -12,3 +12,7 @@ The link to the UI pages is found here: https://walimike.github.io/fast-food-fas
 2. git
 3. pip
 4. virtualenv
+<br/>
+##Getting started##
+1. Clone the project<p>
+`git clone https://github.com/walimike/fast-food-fast.git`
