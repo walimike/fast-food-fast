@@ -1,9 +1,7 @@
 # Fast Food Fast #
 ## Project Overview ##
-**Fast-Food-Fast is a food delivery service app for a restaurant.**
-<p/>
-**Build Badges**<p/>
-       
+**Fast-Food-Fast is a food delivery service app for a restaurant.**<br />
+ [![Test Coverage](https://api.codeclimate.com/v1/badges/3b171fe6c2f140190b29/test_coverage)](https://codeclimate.com/github/walimike/fast-food-fast/test_coverage)     
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3b171fe6c2f140190b29/maintainability)](https://codeclimate.com/github/walimike/fast-food-fast/maintainability)
 
