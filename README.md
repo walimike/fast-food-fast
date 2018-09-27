@@ -34,7 +34,7 @@ The link to the hosted API on Heroku is https://wali1.herokuapp.com/<br />
 # Built with #
 **Inteface**<br />
 1. HTML5
-2. CSS
+2. CSS<br />
 **API Endpoints**
 1. Python 3
 2. Flask
