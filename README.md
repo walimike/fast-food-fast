@@ -27,16 +27,16 @@ The link to the hosted API on Heroku is https://wali1.herokuapp.com/<br />
 ## API Endpoints ##
 |Endpoint   | Verb | Use |
 |-----------|------|-----|
-|`/v1/orders/|GET|Gets a list of orders|
-|`/v1/orders/|POST|Makes an order|
+|`/v1/orders/`|GET|Gets a list of orders|
+|`/v1/orders/`|POST|Makes an order|
 |`/v1/orders/<int:order_id>`|PUT|Updates order status|
 |`/v1/orders/<int:order_id>`|GET|Gets a specific order|
 # Built with #
-**Inteface**
-..* HTML5
-..* CSS
+**Inteface**<br />
+1. HTML5
+2. CSS
 **API Endpoints**
-..* Python 3
-..* Flask
-# AUTHOR #
+1. Python 3
+2. Flask
+## AUTHOR ##
 **WALI MICHAEL ROBERT**

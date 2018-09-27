@@ -11,7 +11,7 @@ def index():
     return "<h1> Welcome to Fast Food Fast </h1>"
 
 """This endpoint fetches all orders, returns empty list, if no order in list"""
-@app.route('/v1/orders', methods=['GET'])
+@app.route('/v1/orders/', methods=['GET'])
 def get_all_orders():
     return jsonify({'orderlist':OrderList().order_list})
 
@@ -24,7 +24,7 @@ def get_specific_order(order_id):
     return jsonify({'food_item': specific_order})
 
 """This endpoint is for making an order"""
-@app.route('/v1/orders', methods=['POST'])
+@app.route('/v1/orders/', methods=['POST'])
 def make_order():
     """checks whether request is in right format"""
     if not request.json or not 'order' in request.json:
