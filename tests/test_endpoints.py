@@ -64,4 +64,16 @@ class EndpointsTestCase(unittest.TestCase):
         self.assertEqual(order_status,"No") 
         response = self.client.put('/v1/orders/1', json = self.test_status1)
         order_status2 = OrderList.order_list[0]["completed_status"]
-        self.assertEqual(order_status2,"Yes")   
+        self.assertEqual(order_status2,"Yes")  
+
+    def test_can_not_get_order_beyond_id_limit(self):
+        response = self.client.get('/v1/orders/1')
+        self.assertEqual(response.status_code,404)
+        response2 = self.client.get('/v1/orders/-1')     
+        self.assertEqual(response.status_code,404)
+
+    def test_must_have_right_ketword(self):
+        """Tests whether json data has right key word"""
+        data = {"ordr":"rice"}    
+        res = self.client.post('/v1/orders', json = data)
+        self.assertEqual(res.status_code,400)
