@@ -38,5 +38,3 @@ class OrderList(object):
         order = [order for order in OrderList.order_list if order['orderid'] == id]
         if len(order)==1:
             return order[0]
-
-print(OrderList().id_limit())
