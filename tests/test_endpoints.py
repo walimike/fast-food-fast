@@ -57,3 +57,11 @@ class EndpointsTestCase(unittest.TestCase):
         res = self.client.post('/v1/orders', json = self.test_order)   
         response = self.client.put('/v1/orders/1', json = self.test_status1)
         self.assertEqual(response.status_code, 200)
+        
+    def test_can_change_status_update(self):
+        res = self.client.post('/v1/orders', json = self.test_order)
+        order_status = OrderList.order_list[0]["completed_status"]
+        self.assertEqual(order_status,"No") 
+        response = self.client.put('/v1/orders/1', json = self.test_status1)
+        order_status2 = OrderList.order_list[0]["completed_status"]
+        self.assertEqual(order_status2,"Yes")   
