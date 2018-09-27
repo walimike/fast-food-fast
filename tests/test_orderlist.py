@@ -26,15 +26,7 @@ class TestOrderList(unittest.TestCase):
         self.assertEquals(OrderList.order_list[-1]["orderid"],3)
         self.tearDown()
 
-    def test_cannot_add_same_subsequent_order(self):
-        self.setUp1()
-        self.assertEquals(OrderList.order_list[-1]["order"],"rice")
-        self.setUp2()
-        OrderList().add_order('matooke',5000)
-        OrderList().add_order('matooke',5000)
-        self.assertEquals(len(OrderList.order_list),4)
-        self.assertEquals(OrderList.order_list[-2]["order"],"maize")
-        self.tearDown()
+
 
     def test_can_update(self):
         self.setUp2()
