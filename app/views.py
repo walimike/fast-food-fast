@@ -5,17 +5,17 @@ from .data import check_catalogue
 
 app = create_app(config_name='development')
 
-#welcome message for user.
+"""This route provides a welcome message for our api"""
 @app.route('/')
 def index():
     return "<h1> Welcome to Fast Food Fast </h1>"
 
-#fetches all orders, returns empty list, if none
+"""This endpoint fetches all orders, returns empty list, if no order in list"""
 @app.route('/v1/orders', methods=['GET'])
 def get_all_orders():
     return jsonify({'orderlist':OrderList().order_list})
 
-# fetches a specific order
+"""This endpoint fetches a specific order based on the ID provided"""
 @app.route('/v1/orders/<int:order_id>', methods=['GET'])
 def get_specific_order(order_id):
     specific_order = OrderList().retrieve_order(order_id)
@@ -23,7 +23,7 @@ def get_specific_order(order_id):
         abort(404)
     return jsonify({'food_item': specific_order})
 
-# endpoint for making an order
+"""This endpoint is for making an order"""
 @app.route('/v1/orders', methods=['POST'])
 def make_order():
     """checks whether request is in right format"""
@@ -42,17 +42,22 @@ def make_order():
     OrderList().add_order(recieved_order,check_catalogue(recieved_order))
     return jsonify({'orderlist': OrderList.order_list}), 201
 
-
-# endpoint for updating the completion status for an order
+"""This endpoint is for updating the completion status for an order"""
 @app.route('/v1/orders/<int:order_id>', methods=['PUT'])
 def update_order(order_id):
     if not type(order_id)==int:
         abort(400)
+
+    """checks the the json data is inthe right format and has the right key word"""    
     if not request.json or not 'completed_status' in request.json:
         abort(400)      
     new_status =  request.get_json()['completed_status']
+    
+    """checks that the order ID does not exceed the maximum ID"""
     if order_id > OrderList().id_limit():
         return jsonify({"error":"ID out of range"})
+
+    """checks that our completed status is either yes or no"""    
     if new_status.lower() != "yes":
         if new_status.lower() != "no":
             abort(406)
