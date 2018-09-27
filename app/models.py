@@ -13,10 +13,6 @@ class OrderList(object):
         self.price = price
         self.status = "No"
         new_order = self.asdict(self.id,self.order,self.price,self.status)
-
-        """This loop prevents replication of orders"""
-        if not len(OrderList.order_list) == 0 and OrderList.order_list[-1]["order"] == self.order:
-            return
         OrderList.order_list.append(new_order)
 
     def asdict(self, id, order, price,status):
@@ -34,6 +30,8 @@ class OrderList(object):
         order[0]['completed_status'] = status.title()
         
     def id_limit(self):
+        if OrderList.order_list == []:
+            return 0
         return OrderList.order_list[-1]['orderid']
 
     def retrieve_order(self,id):
@@ -41,4 +39,4 @@ class OrderList(object):
         if len(order)==1:
             return order[0]
 
-OrderList().add_order("matooke",5000)
+print(OrderList().id_limit())
