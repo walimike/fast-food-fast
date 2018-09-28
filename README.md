@@ -14,7 +14,7 @@
 
 ## Getting started ##
 1. Clone the project
-`git clone' https://github.com/walimike/fast-food-fast.git
+`git clone` https://github.com/walimike/fast-food-fast.git
 2. Create a virtual enviroment using `virtualenv` and activate it.
 3. Install packages using `pip install -r requirements.txt`
 4. Run the app using `python3 run.py`
@@ -33,7 +33,7 @@ The link to the hosted API on Heroku is https://wali1.herokuapp.com/<br />
 # Built with #
 **Inteface**<br />
 1. HTML5
-2. CSS<br />
+2. CSS <br />
 **API Endpoints**
 1. Python 3
 2. Flask
