@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Michael Robert Wali">
+    <title>User</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <section class="userlayout">
+      <nav>
+        <h1>Welcome to <span class="caps">Fast Food Fast</span></h1>
+        <a href="index.html"><button type="submit" class="button" onClick="" >Log out</button></a>
+      </nav>
+      <div id="menu">
+        <h1>On the menu</h1>
+        <div id="food">
+          <table>
+            <thead><tr><th>Item</th><th>Price</th><th>Check</th></tr></thead>
+            <tbody>
+              <tr><td>Chips Plain</td><td>4500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Kebabs</td><td>700</td><td><input type="checkbox"></td></tr>
+              <tr><td>Sausages</td><td>1500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Chapati</td><td>500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Liver</td><td>6000</td><td><input type="checkbox"></td></tr>
+              <tr><td>Pilau</td><td>5500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Goats Meat</td><td>6500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Matooke</td><td>4500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Plain Rice</td><td>5000</td><td><input type="checkbox"></td></tr>
+              <tr><td>Pizza</td><td>25000</td><td><input type="checkbox"></td></tr>
+              <tr><td>Samosa</td><td>1000</td><td><input type="checkbox"></td></tr>
+              <tr><td>African Tea</td><td>1500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Beef</td><td>4000</td><td><input type="checkbox"></td></tr>
+              <tr><td>Beans</td><td>2500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Fish</td><td>8500</td><td><input type="checkbox"></td></tr>
+              <tr><td>Cow Peas</td><td>3200</td><td><input type="checkbox"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="order">
+          <button type="submit" class="button" onClick="addToCart()" >Add To Cart</button>
+        </div>
+      </div>
+      <div id="foodcart">
+        <h1>Food Cart</h1>
+        <div id="selecteditems">
+          <table>
+            <tr><th></th></tr>
+          </table>
+        </div>
+        <button type="submit" class="button1" onClick="clearDiv(); makeOrder(); refreshPage();" >Make Order</button>
+      </div>
+      <div id="viewhistory">
+        <h1>View History</h1>
+        <table>
+          <tr><th>Food bought</th><th>Price</th><th>Date</th></tr>
+							<tr><td>Chicken</td><td>4500</td><td>28/08/2017</td></tr>
+						  <tr><td>Chips</td><td>4000</td><td>08/09/2018</td></tr>
+              <tr><td>Kebabs</td><td>1500</td><td>04/12/2017</td></tr>
+              <tr><td>Rice</td><td>3500</td><td>02/03/2018</td></tr>
+              <tr><td>Goats Meat</td><td>7500</td><td>29/12/2017</td></tr>
+              <tr><td>Chicken</td><td>4500</td><td>08/08/2018</td></tr>
+        </table>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>

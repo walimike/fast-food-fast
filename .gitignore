@@ -1,0 +1,8 @@
+venv/
+.pytest_cache/
+app/__pycache__
+tests/__pycache__
+.vscode/
+app/exp.py
+tests/exp.py
+.coverage

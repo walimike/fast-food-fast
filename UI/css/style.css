@@ -1,0 +1,448 @@
+
+/* global styling for multiple pages */
+
+body{
+  background-color: #bcc8a5;
+  height: 100%;
+}
+
+.layout{
+  background-image: url("../images/fastfoodfast_1.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  border:  1.5px solid #9898ff;
+}
+
+.branding{
+  float: left;
+  margin-left: 20px;
+}
+
+.highlight{
+  color: #e8491d;
+  font-weight: bold;
+}
+
+.branding h1{
+  font: 50px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 20px;
+}
+
+header .branding{
+  float: right;
+}
+
+/* styling for index.html */
+
+.form{
+  height: 60%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 140px;
+  padding: 20px;
+  background-color: transparent;
+	border: 3px solid #9898ff;
+	border-radius: 5px;
+}
+
+.signup{
+  margin-top: 50px;
+}
+
+.signup h1{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  margin: 10px;
+  color: white
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.log_in{
+  margin-top: 20px;
+  float: left;
+}
+
+input[type=name], input[type=password] {
+    width: 100%;
+    height: 38px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #9898ff;
+    font: 20px/1.5 Arial, Helvetica, sans-serif;
+}
+
+input[type=radio]{
+  border: 0px;
+  width: 10%;
+  height: 1.3em;
+}
+
+form p{
+  font:  20px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.button, .button1, .button2{
+  color: white;
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 3px;
+}
+
+.button{
+  background-color: blue;
+  float: left;
+}
+
+.button1{
+  background-color: #4CAF50;
+  float: right;
+}
+
+.button2{
+  background-color: red;
+  float: right;
+}
+
+/* styling for userhome.html */
+
+.userlayout, .adminlayout{
+background:lightgreen; 
+background-size: 100% 100%;
+height: 1000px;
+border:  1.5px solid #9898ff;
+}
+
+nav{
+  height: 10%;
+  padding: 5px;
+}
+ nav a button{
+  margin-top: 20px;
+ }
+
+nav h1{
+  float: left;
+  font: 30px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+nav a{
+  float: right;
+  margin-top: 40px;
+  margin-right: 20px;
+  font-weight: bold;
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.caps{
+  color: #e8491d;
+  font-weight: bold;
+}
+
+#menu{
+  height: 50%;
+  float: left;
+  width: 45%;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 3px solid #9898ff;
+  border-radius: 5px;
+}
+
+#menu h1{
+  font: 35px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+#food{
+  width:90%;
+  height: 70%;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+#food table{
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+#food thead{
+  background-color: #4CAF50;
+}
+
+#food th, td  {
+    text-align: center;
+    border-radius: 10px 2px;
+    border-bottom: 2px solid #ddd;
+}
+
+#food th {
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 35px;
+  color: white;
+}
+
+#food td {
+  height: 30px;
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+input[type=checkbox]:not(old){
+  display      : inline-block;
+  margin: auto;
+  padding: inherit;
+  border: 0px;
+  width: 30%;
+  height: 1.5em
+}
+
+#foodcart{
+  height: 25%;
+  float: right;
+  width: 38%;
+  margin-top: 80px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 3px solid #9898ff;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+#foodcart h1, #viewhistory h1{
+  font: 25px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+#viewhistory{
+  height: 40%;
+  float: right;
+  width: 45%;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid #9898ff;
+  border-radius: 5px;
+}
+
+#viewhistory table{
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+#viewhistory th, #viewhistory td  {
+    background-color: #4CAF50;
+    color: white;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#selecteditems table{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+/* styling for admin home*/
+
+
+#adminmenu h1, #admincart h1, #admincart2 h1{
+  text-align: center;
+  font: 30px/1.5 Arial, Helvetica, sans-serif;
+  margin: 2px;
+  color: white;
+}
+
+#adminmenu{
+  height: 40%;
+  float: left;
+  width: 35%;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid #9898ff;
+  border-radius: 5px;
+}
+
+#admincart, #admincart2{
+  float: right;
+  width: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid #9898ff;
+  border-radius: 5px;
+}
+
+#admincart{
+  height: 20%;
+  overflow-y: scroll;
+}
+
+#admincart2{
+    height: 55%;
+}
+
+#order{
+  margin-bottom: 0px;
+}
+
+#foodlist{
+  overflow: hidden;
+  height: 70%;
+  width: 90%;
+  margin: auto;
+}
+
+#foodlist p{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.button3, .button4{
+  color: white;
+  float: right;
+  margin-left: 20px;
+  height: 25px;
+  width: 60px;
+}
+
+.button3{
+  background-color: #4CAF50;
+}
+
+.button4{
+  background-color: red;
+}
+
+.adminform{
+  height: 30px;
+}
+
+.adminform .foodform, .adminform .priceform{
+  margin: 8px 8px;
+  text-align: center;
+  height: 20px;
+  width: 45%;
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.adminform .foodform{
+  float:left;
+}
+
+.adminform .priceform{
+  float:right;
+}
+
+.button5 .button{
+  float:right;
+}
+
+/* signup.html styling */
+
+.signupform{
+  height: 80%;
+  width: 60%;
+  margin: 100px 220px;
+  padding: 15px;
+  background-color: transparent;
+	border: 2px solid #9898ff;
+  border-radius: 5px;
+
+}
+
+.signup{
+  margin-top: 10px;
+}
+
+.signup .form-input{
+  width: 50%;
+  height: 30px;
+  margin: 10px 70px;
+  border: 1px solid #9898ff;
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.signup p{
+  font:  20px/1.5 Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.signupform .login{
+  margin-top: 10px;
+}
+
+.log_in h1{
+  font: 20px/1.5 Arial, Helvetica, sans-serif;
+  margin: 5px;
+  color: white;
+  float: right;
+}
+
+.button6{
+  color: white;
+  margin: 5px;
+  height: 40px;
+  width: 100px;
+  border-radius: 3px;
+  background-color: blue;
+  float: left;
+}
+
+#adminpic{
+  width: 70%;
+  margin-top: 50px;
+  float: right;
+}
+
+#adminpic img{
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+
+.index_signup{
+  float: left;
+  margin-top: 70px;
+  margin-left: 0px;
+}
+
+.index_button{
+  float: left;
+  text-align: left;
+}
+
+.index_button button{
+  float: left;
+}
